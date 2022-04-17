@@ -1,0 +1,26 @@
+
+.tree .node{  
+  text-align: left;
+  padding: 8px 0px 8px 16px;
+}
+
+.tree > .node {
+  padding-left: 0px;
+  padding-top: 0px;
+}
+
+.tree .node .header{
+  background-color: #cfcfcf;
+  padding: 8px;
+}
+
+.tree .node .wrapper{
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 8px;
+}
+
+.tree .node .description{
+  font-size: 10px;
+  display: block;
+}

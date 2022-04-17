@@ -1,0 +1,14 @@
+.selected-items{
+  display: inline-block;
+}
+
+.selected-items h3 {
+  text-align: left;
+  padding-left: 8px;
+}
+
+.selected-item{
+  padding: 8px;
+  margin: 0 8px 8px;
+  background-color: #cfcfcf;
+}

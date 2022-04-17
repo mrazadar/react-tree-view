@@ -1,0 +1,40 @@
+// React.js/ React Native/ Angular Assessment
+
+// Please consider the below hierarchy of products
+
+// 1. Product Category (Mobile Phones, Watches, Computers etc)
+// 2. Brand (Apple, Nokia etc.)
+// 3. Model (iphone 8, iphone X etc.)
+// 4. Variant ( 128 GB, 256GB etc.)
+
+// A product is tagged only to one specific category, brand, model and a variant. Each product is unique (Used products)
+// You are required to: 
+
+// build a tree view to browse through products. The same component will be used in several
+// sections of the application with minor variations to the look and feel and functionality in the future. 
+
+// You may make assumptions about the exact behavior of the treeview.
+
+// You may create your own mock data to generate the tree view.
+
+
+// You will be evaluated against:
+// - Completeness
+// - Code cleanliness
+// - Unit Tests /Test Coverage
+// - Reusability
+// - Scalability
+// - Performance
+// The output should be bullet-proof and production ready. 
+
+// We would love to read your best display of Software Engineering through this sample work.
+
+// TODOS: 
+// - Setup font-family
+// - Setup theme
+// - Accept dynamic styles
+
+// - **Implement Search
+// - If all subs selected, select the parent automatically and vice versa
+
+// - write prop-types definition
