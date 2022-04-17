@@ -10,6 +10,10 @@ This is the test project to build react tree component.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+#### TODO+
+
+Clean the project from create react app to custom sample plugin setup.
+
 ### Available Scripts
 
 In the project directory, you can run:

@@ -1,7 +1,8 @@
 {
-  "name": "soum-test",
+  "name": "react-tree-view",
   "version": "0.1.0",
-  "private": true,
+  "description": "React tree View sample project.",
+  "main": "index.js",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.0.1",
@@ -23,6 +24,15 @@
       "react-app/jest"
     ]
   },
+  "keywords": [
+    "react-tree-view",
+    "react tree view",    
+    "react",
+    "react-component",
+    "tree",
+    "web",
+    "tree view"
+  ],
   "browserslist": {
     "production": [
       ">0.2%",
