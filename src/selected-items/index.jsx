@@ -16,6 +16,7 @@ export const SelectedItems = ({
   const list = idsSource.map((idsSource) => {
     const ids = idsSource.split('^');
     const text = getTextWithParentsInfo(data, ids);
+    
     return (
       <div className="selected-item" key={text}> {text} </div>      
     );

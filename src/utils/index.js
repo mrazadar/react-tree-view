@@ -6,14 +6,18 @@
  * @param {isSelected} should add or remove 
  * @returns uniq array of ids source map
  */
- export const getUniqIdsSourceMap = (prevIdsSource, newValues, isSelected) => {
+ export const getUniqIdsSourceMap = (
+   prevIdsSource, 
+   newValues, 
+   isSelected
+) => {
   let idsSource = [...prevIdsSource];
   newValues.forEach((val) => {
     const index = idsSource.findIndex((v) => v === val);
-    if(index !== -1 && !isSelected){ //if found && action is remove
+    if(index !== -1 && !isSelected){ //if found & action is remove
       idsSource.splice(index, 1)
     }
-    if(index === -1 && isSelected) {//if found && parent seleced..
+    if(index === -1 && isSelected) {//if not found & action is add
       idsSource.push(val);
     }    
   });
@@ -27,9 +31,10 @@
  * @param {id} 
  * @returns concatenated parent id. 
  */
-export const getParentId = (parentId, id) => (
-  parentId === '' ? id.toString() : `${parentId}^${id}`
-);
+export const getParentId = (parentId, id) => {
+  if(!id) return ''; 
+  return parentId === '' ? id.toString() : `${parentId}^${id}`
+};
 
 /**
  * 
@@ -39,6 +44,8 @@ export const getParentId = (parentId, id) => (
  * categories childrens (nth nodes). 
  */
 export const getAllChildrenIds = (categories, parentId) => {
+  if(!categories?.length) return [];
+  
   let ids = [];
   categories.forEach((cat) => {
     if(!cat?.categories && !cat.categories?.length){
@@ -61,17 +68,17 @@ export const getAllChildrenIds = (categories, parentId) => {
  * @returns concatenated string with all the parents titles. 
  */
  export const getTextWithParentsInfo = (data, ids) => {
-  if (!ids.length || !data?.length) return '';
+  if (!ids?.length || !data?.length) return '';
 
-  //parse json tree and collect data
+  //parse json tree and collect data titles
   return ids.reduce((
     [categories, str], 
     currentValue, 
     currentIndex
   ) => {
     const cat = categories[(currentValue-1)];       
-    const text = `${str} ${cat.title}${((currentIndex !== (ids.length-1)) ? ', ' : '')}`;
+    const text = `${str}${cat.title}${((currentIndex !== (ids.length-1)) ? ', ' : '')}`;
     
     return [(cat?.categories || []), text];
-  }, [data, '']);
+  }, [data, ''])[1].trim(); //return text with trim
 }
