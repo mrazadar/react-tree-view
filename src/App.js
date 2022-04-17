@@ -13,7 +13,7 @@ function App() {
   const { categories } = jsonData;  
   const [idsSource, updateIdsSource] = useState([]);  
 
-  const onSelectItems = (isSelected, value) => {
+  const onSelectItem = (isSelected, value) => {
     updateIdsSource(getUniqIdsSourceMap(idsSource, value, isSelected));
   };
 
@@ -23,7 +23,7 @@ function App() {
         <h3>Browse Products:</h3>
         <Tree 
           data={categories} 
-          onSelectItems={onSelectItems}
+          onSelectItem={onSelectItem}
         />         
       </div>
       <SelectedItems 

@@ -35,8 +35,8 @@ test('getUniqIdsSourceMap should return uniq ids array', () => {
     '1^1^1^1',
     '1^1^2',   
   ]);
-  expect(getUniqIdsSourceMap(prevIdsSource, [], false)).toStrictEqual(prevIdsSource);
-  expect(getUniqIdsSourceMap([], [], true)).toStrictEqual([]);
+  expect(getUniqIdsSourceMap(prevIdsSource, [], false)).toEqual(prevIdsSource);
+  expect(getUniqIdsSourceMap([], [], true)).toEqual([]);
 });
 
 //test getTextWithParentsInfo

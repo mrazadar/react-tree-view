@@ -9,7 +9,7 @@ import "./branch.css";
 export const Branch = ({ 
   data, 
   parentId, 
-  onSelectItems,
+  onSelectItem,
   isSelected,
 }) => {
   return (
@@ -21,7 +21,7 @@ export const Branch = ({
             isHeader={(i===0 && (node?.categories?.length > 0))} 
             key={`${i}-${node.id}`}
             parentId={parentId}
-            onSelectItems={onSelectItems}
+            onSelectItem={onSelectItem}
             isNodeSelected={isSelected}            
           />
         ))

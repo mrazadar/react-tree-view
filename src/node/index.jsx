@@ -21,7 +21,7 @@ export const Node = ({
   isHeader, 
   parentId,
   isNodeSelected,  
-  onSelectItems, 
+  onSelectItem, 
 }) => {
   const [isSelected, setSelected] = useState((isNodeSelected ? isNodeSelected : false));
 
@@ -35,7 +35,7 @@ export const Node = ({
     }else{
       selectedIds.push(getParentId(parentId, data.id));
     }
-    onSelectItems(_isSelected, selectedIds);
+    onSelectItem(_isSelected, selectedIds);
 
     setSelected(_isSelected);
   };
@@ -45,7 +45,7 @@ export const Node = ({
     return <Branch 
       data={data.categories} 
       parentId={getParentId(parentId, data.id)} 
-      onSelectItems={onSelectItems}
+      onSelectItem={onSelectItem}
       isSelected={isSelected}
     />;
   };
@@ -60,11 +60,12 @@ export const Node = ({
     <li className="node">
       <div className={isHeader ? 'header': ''}>
         <input 
+          data-testid={data.title}
           type="checkbox" 
           checked={isSelected}
           onChange={onSelect}
         />
-        <div className='wrapper'>
+        <div className="wrapper">
           <span className="title">
             {data.title}
           </span>
