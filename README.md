@@ -4,15 +4,15 @@ This is the test project to build react tree component.
 
 ## Demo
 
-![alt text](./src/images/sample.png "Screenshot")
-
-### Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![alt text](./static/sample.png "Screenshot")
 
 #### TODO+
 
 Clean the project from create react app to custom sample plugin setup.
+
+### Getting Started with Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ### Available Scripts
 
