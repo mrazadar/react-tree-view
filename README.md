@@ -6,11 +6,11 @@ This is the test project to build react tree component.
 
 ![alt text](./src/images/sample.png "Screenshot")
 
-# Getting Started with Create React App
+### Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Available Scripts
 
 In the project directory, you can run:
 
