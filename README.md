@@ -4,7 +4,7 @@ This is the test project to build react tree component.
 
 ## Demo
 
-![alt text](./static/sample.png "Screenshot")
+![alt text](./screenshots/sample.png "Screenshot")
 
 #### TODO+
 
