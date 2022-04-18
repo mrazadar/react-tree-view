@@ -13,10 +13,10 @@ test('Node component unit test.', () => {
   };
   let selctedIds = [];
   let selected = false;
-  const onSelectItem = (isSelected, value) => {
+  const onSelectItem = jest.fn((isSelected, value) => {
     selctedIds = value;
     selected = isSelected;
-  };
+  });
 
   const {debug} = render(
     <Node 
@@ -40,7 +40,6 @@ test('Node component unit test.', () => {
   
   expect(cbEl).toBeChecked();
   expect(selected).toBe(true);
-  // expect(onSelectItem).toHaveBeenCalled();
+  expect(onSelectItem).toHaveBeenCalled();
   expect(selctedIds).toEqual(['3']);
-
 });

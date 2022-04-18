@@ -9,12 +9,10 @@ This is the test project to build react tree component.
 #### TODO+
 
 - Clean the project from create react app to custom sample plugin setup.
-- Setup font-family
 - Setup theme
 - Accept dynamic styles
 
 - **Implement Search
-- If all subs selected, select the parent automatically and vice versa
 - write prop-types definitions
 
 ### Getting Started with Create React App
